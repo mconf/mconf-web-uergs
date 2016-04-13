@@ -1,0 +1,21 @@
+#navbar-wrapper {
+  background: image-url("uergs/navbar-bg.jpg") repeat-x left top;
+
+  #main-logo {
+    margin-top: 4px;
+    margin-right: 10px;
+
+    img {
+      width: 114px;
+      height: 38px;
+    }
+  }
+
+  #navbar-right-links .user-info-dropdown {
+    padding: 10px 10px 7px 10px;
+  }
+
+  #navbar-left-links {
+    margin-top: 4px;
+  }
+}

@@ -33,4 +33,6 @@
  *= require ./app/shared/_copy_modal
  *= require ./app/feedback/_new
  *
+ * UERGS
+ *= require ./app/application/uergs
  */
