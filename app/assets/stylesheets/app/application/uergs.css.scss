@@ -1,3 +1,7 @@
+@import "compass/css3";
+@import "compass/typography";
+@import "definitions";
+
 #navbar-wrapper {
   background: image-url("uergs/navbar-bg.jpg") repeat-x left top;
 
@@ -18,4 +22,125 @@
   #navbar-left-links {
     margin-top: 4px;
   }
+}
+
+// The footer is a lot cleaner
+#footer-wrapper {
+  border: 0;
+  //background: #fff;
+}
+#footer {
+  border-top: 1px dashed #ccc;
+  padding-top: 10px;
+
+  .copyright {
+    margin-top: 5px;
+  }
+
+  .link-group > h3 {
+    margin-top: 0;
+    font-weight: normal;
+  }
+
+  .footer-address {
+    margin-right: 50px;
+  }
+}
+
+// Sponsored by
+#footer {
+
+  .sponsored-by {
+    float: right;
+    clear: right;
+    @include mconf-clearfix;
+  }
+
+  .mconftec {
+    float: right;
+    margin: 10px 10px 0 0;
+
+    img {
+      width: 32px;
+      height: 32px;
+      @include transition(opacity .5s, border .5s, background .5s);
+      opacity: 0.7;
+      padding: 3px;
+      @include border-radius(4px);
+      border: 1px solid $footer-bg-color;
+    }
+
+    img:hover {
+      opacity: 1;
+    }
+  }
+
+  .mconf {
+    float: right;
+    margin: 10px 10px 0 0;
+
+    img {
+      width: 28px;
+      height: 28px;
+      @include transition(opacity .5s, border .5s, background .5s);
+      opacity: 0.7;
+      padding: 6px;
+      @include border-radius(4px);
+      border: 1px solid $footer-bg-color;
+    }
+
+    img:hover {
+      opacity: 1;
+    }
+  }
+
+}
+
+
+
+//
+// Custom frontpage
+//
+body.frontpage.show {
+
+  #navbar-wrapper {
+    background: image-url("uergs/navbar-bg-simple.jpg") repeat left top;
+
+    #main-logo {
+      float: left;
+      margin: 15px 45px 15px 100px;
+      width: 285px;
+      height: 120px;
+
+      img {
+        width: 285px;
+        height: 120px;
+      }
+    }
+
+    #second-logo {
+      float: right;
+      margin: 15px 100px 15px 10px;
+
+      img {
+        width: 231px;
+        height: 120px;
+      }
+    }
+
+  }
+
+  #registration-box {
+    display: none;
+  }
+
+  #login-box {
+    /* @include box-shadow(1px 1px 1px rgba(0,0,0,0.4)); */
+    /* background: lighten($safeweb-blue-dark, 20); */
+    /* padding: 0; */
+    /* width: 400px; */
+    margin: 30px auto;
+    float: none;
+  }
+
 }

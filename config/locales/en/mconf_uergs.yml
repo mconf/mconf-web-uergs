@@ -1,0 +1,14 @@
+---
+en:
+  frontpage:
+    show:
+      headline: "Web conference service"
+  layouts:
+    footer_uergs:
+      address: "Universidade Estadual do Rio Grande do Sul</br>Reitoria: Rua 7 de Setembro, 1156 - Centro - Porto Alegre, RS</br>CEP: 90.010-191 - Fone: (51) 3288-9000"
+      links:
+        feedback: "Send feedback"
+        help: Help
+        title: Links
+      translate:
+        change: "Switch language"

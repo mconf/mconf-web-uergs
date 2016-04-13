@@ -1,16 +1,13 @@
 - content_for :navbar do
   #navbar
     #main-logo
-      %a.title{:href => root_path}= image_tag 'logos/mconf-white-transp.png', :size => '231x120'
+      %a.title{:href => root_path}
+        = image_tag "uergs/logo-navbar-frontpage.png", :size => '285x120'
+    #second-logo
+      = image_tag 'uergs/mconf-logo.png', :size => '240x120'
 
 - content_for :page_header do
-  - if current_site.name.blank?
-    = t(".headline")
-  - else
-    - headline = current_site.name
-    - unless current_site.description.blank?
-      - headline += ": " + current_site.description
-    = headline
+  = t(".headline")
 
 #content
 
