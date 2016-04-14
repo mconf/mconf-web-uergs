@@ -1,5 +1,6 @@
 - registration_enabled = current_site.registration_enabled?
 - shib_enabled = current_site.shib_enabled?
+- oauth2_enabled = current_site.oauth2_enabled?
 
 - if registration_enabled || shib_enabled
   %h3= t('.other_options')
@@ -11,6 +12,9 @@
     -# we show this even if local auth is disabled because admins can still sign in
     - if controller_name != 'sessions'
       %li= link_to t('.login.default'), login_path
+
+    - if oauth2_enabled
+      %li= link_to t('.login.oauth2.moodle'), user_omniauth_authorize_path(:moodle)
 
     - if registration_enabled
       - if devise_mapping.registerable? && controller_name != 'registrations'

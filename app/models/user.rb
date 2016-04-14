@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :async, :registerable,
          :confirmable, :recoverable, :rememberable, :trackable,
-         :validatable, :encryptable
+         :validatable, :encryptable, :omniauthable, omniauth_providers: [:moodle]
   # Virtual attribute for authenticating by either username or email
   attr_accessor :login
   # To login with username or email, see: http://goo.gl/zdIZ5
@@ -33,6 +33,17 @@ class User < ActiveRecord::Base
       where(conditions).where(where_clause).first
     else
       where(conditions).first
+    end
+  end
+
+  # Find users for authentication with omniauth oauth2 integrations
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.email = auth.info.email
+      user.username = auth.uid
+      user.password = Devise.friendly_token[0,20]
+      user._full_name = auth.info.firstname
+      user._full_name += " #{auth.info.lastname}" if auth.info.lastname.present?
     end
   end
 
