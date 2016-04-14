@@ -107,8 +107,9 @@ body.frontpage.show {
     background: image-url("uergs/navbar-bg-simple.jpg") repeat left top;
 
     #main-logo {
-      float: left;
-      margin: 15px 45px 15px 100px;
+      /* float: left; */
+      /* margin: 15px 45px 15px 100px; */
+      margin: 20px auto;
       width: 285px;
       height: 120px;
 
@@ -118,15 +119,15 @@ body.frontpage.show {
       }
     }
 
-    #second-logo {
-      float: right;
-      margin: 15px 100px 15px 10px;
+    /* #second-logo { */
+    /*   float: right; */
+    /*   margin: 15px 100px 15px 10px; */
 
-      img {
-        width: 231px;
-        height: 120px;
-      }
-    }
+    /*   img { */
+    /*     width: 231px; */
+    /*     height: 120px; */
+    /*   } */
+    /* } */
 
   }
 
