@@ -27,6 +27,14 @@ GIT
       railties (>= 3.1)
 
 GIT
+  remote: https://github.com/mconf/omniauth-moodle.git
+  revision: 3c590f325340c5e6eb7fb722c25abd6cd87cc699
+  specs:
+    omniauth-moodle (1.0.0)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
+
+GIT
   remote: https://github.com/mconf/translate.git
   revision: 849ba4469953233cd3a569cf793901d8f018cda9
   specs:
@@ -38,13 +46,6 @@ GIT
   revision: b20bb0b99f0d9291d0704827ca86095bae20a192
   specs:
     forgery (0.6.0)
-
-PATH
-  remote: ./vendor/omniauth-moodle
-  specs:
-    omniauth-moodle (1.0.0)
-      omniauth (~> 1.0)
-      omniauth-oauth2 (~> 1.0)
 
 GEM
   remote: https://rubygems.org/

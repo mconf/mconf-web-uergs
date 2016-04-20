@@ -1,3 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :moodle, "mconf_web", 'cad8465a05e6174c2ec4f8df6a532fce0ef05eb6402fe85c', scope: 'user_info', site: 'http://10.0.3.185'
+  # Put your moodle id, secret key and URL here
+  # See https://github.com/mconf/omniauth-moodle/blob/master/README.md
+  provider :moodle, 'your client id', 'your secret key', scope: 'user_info', site: 'https://yourmoodlewebsite.com'
 end
