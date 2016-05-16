@@ -173,6 +173,7 @@ en:
         locale: "Language"
         max_upload_size: "Maximum file size for uploads"
         name: "Name"
+        oauth2_enabled: Enabled Oauth2 login
         registration_enabled: "Allow users to create new accounts"
         require_registration_approval: "Moderate users"
         require_space_approval: "Moderate spaces"
@@ -609,6 +610,8 @@ en:
         login:
           default: "Sign in to your account"
           federation: "Login via federation"
+          oauth2:
+            moodle: Sign in with Moodle
         lost_password: "Lost your password?"
         other_options: "Other options"
         register: "Create a new account"
@@ -1028,6 +1031,10 @@ en:
   ok: OK
   older: Older
   old_items: "Old Items"
+
+  omniauth:
+    authentication_error: Authentication Error
+
   open: Open
   optional: Optional
   or: or

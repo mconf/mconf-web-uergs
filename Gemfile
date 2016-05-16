@@ -161,3 +161,6 @@ gem 'geocoder'
 gem 'redcarpet'
 gem 'epic-editor-rails'
 gem 'leaflet-rails'
+
+gem 'omniauth'
+gem 'omniauth-moodle', git: 'https://github.com/mconf/omniauth-moodle.git'
