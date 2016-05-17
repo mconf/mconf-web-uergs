@@ -238,3 +238,36 @@ $mail-font-size: $font-normal;
   font-weight: normal;
   @include font-size($font-small);
 }
+
+
+// UERGS
+// colors
+$uergs-green-dark: #325422;
+$uergs-green-light: #345f27;
+// overrides
+$main-color: $uergs-green-dark;
+$second-color: $uergs-green-light;
+$navbar-height: 45px;
+$navbar-bg-color-dark: $uergs-green-dark;
+$navbar-bg-color-light: $uergs-green-light;
+$link-color: #006633;
+$link-color-hover: lighten($link-color, 8);
+$link-color-active: darken($link-color-hover, 15);
+$navbar-menu-open-link: $link-color;
+$navbar-menu-open-link-hover: $link-color-hover;
+$page-header-link-color: $link-color;
+$page-header-link-color-hover: $link-color-hover;
+$font-h-color: darken($uergs-green-dark, 10);
+$footer-bg-color: #fff;
+$footer-height: 100px;
+// font is different and looks bigger, so make it smaller
+$font-family: Verdana, Arial, Helvetica, sans-serif;
+$font-mini: 10px;
+$font-small: 11px;
+$font-normal: 12px;
+$font-medium: 13px;
+$font-big: 15px;
+$font-bigger: 20px;
+$font-biggest: 24px;
+$font-gigantic: 26px;
+$font-section-title: 26px;

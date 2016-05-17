@@ -1,0 +1,30 @@
+#footer-wrapper
+  #footer
+    .sponsored-by
+      .mconftec
+        = link_to "http://mconf.com" do
+          = image_tag "uergs/MconfTec-ico-64x64.png", size: "32x32", title: "Mconf Tecnologia"
+      .mconf
+        = link_to "http://mconf.org" do
+          = image_tag "uergs/Mconf_IconBalloon.png", size: "28x28", title: "Mconf"
+    .link-group.footer-address
+      %div= t('.address').html_safe
+    - if !current_site.external_help.blank? || user_signed_in?
+      .link-group
+        %h3= t('.links.title')
+        %ul
+          - unless current_site.external_help.blank?
+            %li= link_to(t('.links.help'), current_site.external_help)
+          - if user_signed_in?
+            %li= link_to t('.links.feedback'), main_app.new_feedback_path, :id => "feedback_link", :class => "open-modal"
+          -# %li= link_to(t('.links.statistics'), main_app.show_statistics_path )
+    .link-group.footer-languages
+      %h3= t('.translate.change')
+      - available_locales.each_slice(3) do |locales|
+        %ul
+          - locales.each do |locale|
+            %li
+              - flag = image_tag("flags/" + locale.to_s + ".png", title: locale.to_s)
+              - name = locale_i18n(locale)
+              - link = link_to(name, main_app.session_locale_path(l: locale.to_s), method: :post)
+              = (flag + " " + link).html_safe
