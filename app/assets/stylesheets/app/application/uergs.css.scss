@@ -15,8 +15,14 @@
     }
   }
 
-  #navbar-right-links .user-info-dropdown {
-    padding: 10px 10px 7px 10px;
+  #navbar-right-links {
+    li {
+      padding-top: 4px;
+    }
+
+    .user-info-dropdown {
+      padding: 10px 10px 7px 10px;
+    }
   }
 
   #navbar-left-links {
