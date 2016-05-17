@@ -9,7 +9,8 @@ require 'support/feature_helpers'
 
 feature 'Frontpage' do
 
-  context 'visit landing page' do
+  # not for UERGS
+  skip 'visit landing page' do
     before { visit root_path }
 
     it { page.should have_content(Site.current.name) }

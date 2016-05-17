@@ -142,6 +142,15 @@ body.frontpage.show {
     /* width: 400px; */
     margin: 30px auto;
     float: none;
+
+    &.login-oauth2 {
+      text-align: center;
+
+      .observation {
+        color: #666;
+        padding-top: 10px;
+      }
+    }
   }
 
 }

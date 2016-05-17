@@ -1,8 +1,10 @@
 ---
-en:
+pt-br:
   frontpage:
     show:
+      click_to_access: "Clique aqui para acessar sua conta"
       headline: "Serviço de Webconferência"
+      redirected: "(você será redirecionado para o sistema de autenticação externo)"
   layouts:
     footer_uergs:
       address: "Universidade Estadual do Rio Grande do Sul</br>Reitoria: Rua 7 de Setembro, 1156 - Centro - Porto Alegre, RS</br>CEP: 90.010-191 - Fone: (51) 3288-9000"

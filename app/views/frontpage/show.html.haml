@@ -11,7 +11,14 @@
 
 #content
 
-  - if current_site.local_auth_enabled? || current_site.ldap_enabled?
+  - if current_site.oauth2_enabled?
+    #login-box.form-area.login-oauth2
+      = link_to user_omniauth_authorize_path(:moodle), class: "btn btn-large btn-danger" do
+        = t('.click_to_access').html_safe
+      .observation= t('.redirected').html_safe
+      -# %h2= t('.login.title')
+
+  - elsif current_site.local_auth_enabled? || current_site.ldap_enabled?
     #login-box.form-area
       %h2= t('.login.title')
       = render :partial => 'sessions/login_form'
@@ -20,8 +27,3 @@
           - if current_site.shib_enabled?
             %li= link_to t('.login.federation'), shibboleth_path, :class => 'shibboleth_login'
           %li= link_to t('.login.lost_password'), new_user_password_path
-
-  - if current_site.registration_enabled?
-    #registration-box.form-area
-      %h2= t('.register.title')
-      = render :partial => 'registrations/signup_form'
