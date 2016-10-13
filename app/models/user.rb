@@ -284,8 +284,12 @@ class User < ActiveRecord::Base
     LdapToken.user_created_by_ldap?(self)
   end
 
+  def created_by_oauth2?
+    !self.provider.blank?
+  end
+
   def no_local_auth?
-    created_by_shib? || created_by_ldap?
+    created_by_shib? || created_by_ldap? || created_by_oauth2?
   end
 
   protected
