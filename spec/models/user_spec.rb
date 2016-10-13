@@ -40,7 +40,7 @@ describe User do
 
   # Make sure it's being tested in the controller
   # [ :email, :password, :password_confirmation,
-  #   :remember_me, :login, :username, :receive_digest, :approved ].each do |attribute|
+  #   :remember_me, :login, :username, :approved ].each do |attribute|
   #   it { should allow_mass_assignment_of(attribute) }
   # end
 
@@ -758,7 +758,9 @@ describe User do
     context "creates a recent activity" do
       before {
         expect {
-          user.create_approval_notification(approver)
+          PublicActivity.with_tracking do
+            user.create_approval_notification(approver)
+          end
         }.to change{ PublicActivity::Activity.count }.by(1)
       }
       subject { PublicActivity::Activity.last }

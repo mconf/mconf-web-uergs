@@ -1,18 +1,18 @@
 GIT
   remote: https://github.com/mconf/bigbluebutton-api-ruby.git
-  revision: bd3da291b885e230e1cfc4dc2c705a75ec46befa
+  revision: 02b317c1a65ab3cbd9c0dbe38874e403936ff5c4
   branch: master
   specs:
-    bigbluebutton-api-ruby (1.5.0)
+    bigbluebutton-api-ruby (1.6.0)
       xml-simple (~> 1.1)
 
 GIT
   remote: https://github.com/mconf/bigbluebutton_rails.git
-  revision: ca0406edb3f38add1c469d560c8ffe3e01441d39
+  revision: 46ef87d87ec2f3dd14fa843f3dcbbc63ebdafe5b
   branch: master
   specs:
-    bigbluebutton_rails (2.0.0)
-      bigbluebutton-api-ruby (~> 1.4)
+    bigbluebutton_rails (2.1.0)
+      bigbluebutton-api-ruby (~> 1.6)
       browser (~> 0.8.0)
       rails (>= 4.0.0)
       resque (~> 1.25.1)
@@ -194,7 +194,7 @@ GEM
     exception_notification (4.0.1)
       actionmailer (>= 3.0.4)
       activesupport (>= 3.0.4)
-    execjs (2.2.1)
+    execjs (2.6.0)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.4.1)
@@ -215,6 +215,7 @@ GEM
     friendly_id (5.0.4)
       activerecord (>= 4.0.0)
     geocoder (1.2.9)
+    gravatar_image_tag (1.2.0)
     haml (4.0.5)
       tilt
     handlebars_assets (0.17.1)
@@ -270,8 +271,8 @@ GEM
       activesupport (>= 3)
       railties (>= 3)
     logstash-event (1.2.02)
-    mail (2.6.3)
-      mime-types (>= 1.16, < 3)
+    mail (2.6.4)
+      mime-types (>= 1.16, < 4)
     mailcatcher (0.6.1)
       activesupport (>= 4.0.0, < 5)
       eventmachine (~> 1.0.0, <= 1.0.5)
@@ -284,7 +285,7 @@ GEM
     mime-types (1.25.1)
     mini_magick (3.8.1)
       subexec (~> 0.2.1)
-    mini_portile (0.6.0)
+    mini_portile2 (2.0.0)
     minitar (0.5.4)
     minitest (5.8.4)
     mixlib-authentication (1.3.0)
@@ -296,7 +297,7 @@ GEM
     momentjs-rails (2.8.3)
       railties (>= 3.1)
     mono_logger (1.1.0)
-    multi_json (1.11.2)
+    multi_json (1.12.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.16)
@@ -308,8 +309,8 @@ GEM
     net-ssh-multi (1.2.0)
       net-ssh (>= 2.6.5)
       net-ssh-gateway (>= 1.2.0)
-    nokogiri (1.6.2.1)
-      mini_portile (= 0.6.0)
+    nokogiri (1.6.7.2)
+      mini_portile2 (~> 2.0.0.rc2)
     oauth2 (1.1.0)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0, < 1.5.2)
@@ -350,7 +351,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    public_activity (1.4.1)
+    public_activity (1.5.0)
       actionpack (>= 3.0.0)
       activerecord (>= 3.0)
       i18n (>= 0.5.0)
@@ -384,6 +385,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.5.0)
+    recaptcha (3.3.0)
+      json
     redcarpet (3.3.2)
     redis (3.1.0)
     redis-namespace (1.5.0)
@@ -504,9 +507,8 @@ GEM
       railties (>= 3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.5.1)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    uglifier (3.0.0)
+      execjs (>= 0.3.0, < 3)
     uuidtools (2.1.5)
     valid_email (0.0.11)
       activemodel
@@ -578,6 +580,7 @@ DEPENDENCIES
   forgery!
   friendly_id (~> 5.0.4)
   geocoder
+  gravatar_image_tag
   haml
   handlebars_assets
   htmlentities (~> 4.3.3)
@@ -603,7 +606,7 @@ DEPENDENCIES
   populator
   premailer-rails
   prism
-  public_activity (~> 1.4.1)
+  public_activity (~> 1.5.0)
   quiet_assets
   rabl
   rack (~> 1.5.4)
@@ -611,6 +614,7 @@ DEPENDENCIES
   rails-footnotes
   rails_autolink (~> 1.1.0)
   rake (~> 10.5.0)
+  recaptcha
   redcarpet
   resque (~> 1.25.2)
   resque-lock-timeout
